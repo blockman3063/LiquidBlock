@@ -67,7 +67,7 @@ import java.awt.Color
 import kotlin.math.cos
 import kotlin.math.max
 import kotlin.math.sin
-
+import net.ccbluex.liquidbounce.features.module.modules.movement.MoveCorrection
 object KillAura : Module("KillAura", ModuleCategory.COMBAT, Keyboard.KEY_R) {
     /**
      * OPTIONS
@@ -207,7 +207,7 @@ object KillAura : Module("KillAura", ModuleCategory.COMBAT, Keyboard.KEY_R) {
     private val silentRotationValue = BoolValue("SilentRotation", true) { !maxTurnSpeedValue.isMinimal() }
     private val silentRotation by silentRotationValue
     private val rotationStrafe by ListValue(
-        "Strafe", arrayOf("Off", "Strict", "Silent"), "Off"
+        "Strafe", arrayOf("Off", "Strict", "Silent","MoveCorrection"), "Off"
     ) { silentRotationValue.isActive() }
     private val randomCenter by BoolValue("RandomCenter", true) { !maxTurnSpeedValue.isMinimal() }
     private val outborder by BoolValue("Outborder", false) { !maxTurnSpeedValue.isMinimal() }

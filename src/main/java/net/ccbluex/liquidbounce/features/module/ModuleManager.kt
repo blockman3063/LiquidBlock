@@ -139,6 +139,7 @@ object ModuleManager : Listenable {
             MidClick,
             MoreCarry,
             MultiActions,
+            MoveCorrection,
             NameProtect,
             NameTags,
             NoBob,

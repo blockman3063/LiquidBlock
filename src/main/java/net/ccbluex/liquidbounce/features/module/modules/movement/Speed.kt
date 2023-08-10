@@ -31,10 +31,8 @@ object Speed : Module("Speed", ModuleCategory.MOVEMENT) {
         YPort, YPort2, 
         
         // AAC
-        AACBHop, AAC2BHop, AAC3BHop, AAC4BHop, AAC5BHop, AAC6BHop, AAC7BHop, AACHop3313, AACHop350, AACHop438, OldAACBHop, 
-        AACLowHop, AACLowHop2, AACLowHop3,
-        AACGround, AACGround2,
-        AACYPort, AACYPort2, AACPort,
+        AACHop438,
+        AACGround,
         
         // Spartan
         SpartanYPort,
