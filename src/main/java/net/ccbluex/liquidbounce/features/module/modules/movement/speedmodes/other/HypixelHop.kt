@@ -16,16 +16,8 @@ object HypixelHop : SpeedMode("HypixelHop") {
         if (isMoving) {
             if (mc.thePlayer.onGround) {
                 mc.thePlayer.jump()
-                var targetSpeed = if (speed < 0.56f) speed * 1.045f else 0.56f
-                if (mc.thePlayer.onGround && mc.thePlayer.isPotionActive(Potion.moveSpeed)) targetSpeed *= 1f + 0.13f * (1 + mc.thePlayer.getActivePotionEffect(Potion.moveSpeed).amplifier)
-                strafe(targetSpeed)
-                return
-            } else if (mc.thePlayer.motionY < 0.2) mc.thePlayer.motionY -= 0.02
-
-            speed *= 1.01889f
-        } else {
-            mc.thePlayer.motionZ = 0.0
-            mc.thePlayer.motionX = mc.thePlayer.motionZ
+                mc.thePlayer.speedInAir = 0.483f
+            } else if (mc.thePlayer.motionY < 0.005 && mc.thePlayer.motionY > 0.005) mc.thePlayer.motionY -= 0.02
         }
     }
 
